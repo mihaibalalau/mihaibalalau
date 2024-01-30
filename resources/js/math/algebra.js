@@ -59,6 +59,8 @@ const el = (tag, options) => {
 }
 
 const div = (options) => el('div', options);
+const row = ({ className = '', ...options }) => el('div', { ...options, class: 'row ' + className });
+const column = ({ className = '', ...options }) => el('div', { ...options, class: 'column ' + className });
 
 
 /*
@@ -72,8 +74,8 @@ const random = (min = 0, max = 100) => Math.floor(Math.random() * (1 + max - min
 
 const simpleMultiplication = () => {
     const format = random(1, 3);
-    const x = random();
-    const y = random();
+    const x = random(0, 50);
+    const y = random(0, 50);
     const z = x * y;
     let expression = '';
 
@@ -82,10 +84,10 @@ const simpleMultiplication = () => {
             expression = `${z} = ${y} * x`;
             break;
         case 2:
-            expression = `${z} / x = ${y}`;
+            expression = `\\frac{${z}}{x} = ${y}`;
             break;
         case 3:
-            expression = `${z} / ${y} = x`;
+            expression = `\\frac{${z}}{${y}} = x`;
             break;
         default:
             throw new Error('Whoaa!');
