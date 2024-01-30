@@ -2,6 +2,10 @@ window.addEventListener('DOMContentLoaded', () => {
     document.body.append(
         div([
             div({ text: simpleMultiplication() }),
+            div({ text: simpleMultiplication() }),
+            div({ text: simpleMultiplication() }),
+            div({ text: simpleMultiplication() }),
+            div({ text: simpleMultiplication() }),
         ])
     )
 });
@@ -29,15 +33,7 @@ const el = (tag, options) => {
 }
 
 const div = (options) => el('div', options);
-const span = (options) => el('span', options);
 
-const fraction = (sup, sub) => {
-    return div([
-        span({ text: sup }),
-        span({ text: '/' }),
-        span({ text: sub }),
-    ])
-}
 
 /*
 (x+1)^2 =
@@ -56,11 +52,11 @@ const simpleMultiplication = () => {
 
     switch (format) {
         case 1:
-            return `${z} = ${y}x`;
+            return `${z} = ${y} * x`;
         case 2:
-            return `${fraction(z, 'x')} = ${y}`;
+            return `${z} / x = ${y}`;
         case 3:
-            return `${z} = ${y}x`;
+            return `${z} / ${y} = x`;
         default:
             throw new Error('Whoaa!');
     }

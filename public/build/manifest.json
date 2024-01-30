@@ -10,8 +10,16 @@
     "src": "resources/css/global.css"
   },
   "resources/js/app.js": {
-    "file": "assets/app-Hbrfc-23.js",
+    "file": "assets/app-SG6M3BqK.js",
+    "imports": [
+      "resources/js/math/algebra.js"
+    ],
     "isEntry": true,
     "src": "resources/js/app.js"
+  },
+  "resources/js/math/algebra.js": {
+    "file": "assets/algebra-vZ_BsojX.js",
+    "isEntry": true,
+    "src": "resources/js/math/algebra.js"
   }
 }

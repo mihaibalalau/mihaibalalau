@@ -7,7 +7,9 @@ export default defineConfig({
             input: [
                 'resources/css/global.css',
                 'resources/css/app.css',
+
                 'resources/js/app.js',
+                'resources/js/math/algebra.js',
             ],
             refresh: true,
         }),
