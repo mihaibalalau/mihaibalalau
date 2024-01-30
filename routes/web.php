@@ -14,5 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.home');
+});
+
+
+Route::group(['prefix' => 'math'], function () {
+    Route::get('algebra', function () {
+        return view('pages.math.algebra');
+    });
 });
