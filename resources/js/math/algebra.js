@@ -1,7 +1,14 @@
 window.addEventListener('DOMContentLoaded', () => {
     document.body.append(
-        row({
-            children: Array(10).fill(0).map(i => column({ text: simpleMultiplication() }))
+        ol({
+            className: 'column',
+            children: Array(10).fill(0).map(
+                () => li({
+                    children: [
+                        simpleMultiplication()
+                    ]
+                })
+            )
         })
     );
 
@@ -53,6 +60,8 @@ const el = (tag, options) => {
 const div = (options) => el('div', options);
 const row = (options) => el('div', { ...options, className: 'row ' + (options.className ?? '') });
 const column = (options) => el('div', { ...options, className: 'column ' + (options.className ?? '') });
+const ol = (options) => el('ol', options);
+const li = (options) => el('li', options);
 
 
 /*
