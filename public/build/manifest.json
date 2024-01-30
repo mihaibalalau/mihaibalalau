@@ -9,11 +9,6 @@
     "isEntry": true,
     "src": "resources/css/global.css"
   },
-  "resources/css/math/algebra.css": {
-    "file": "assets/algebra-Avepgyad.css",
-    "isEntry": true,
-    "src": "resources/css/math/algebra.css"
-  },
   "resources/js/app.js": {
     "file": "assets/app-Hbrfc-23.js",
     "isEntry": true,
