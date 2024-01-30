@@ -4,8 +4,18 @@
     "isEntry": true,
     "src": "resources/css/app.css"
   },
+  "resources/css/global.css": {
+    "file": "assets/global-vkSbMXLK.css",
+    "isEntry": true,
+    "src": "resources/css/global.css"
+  },
+  "resources/css/math/algebra.css": {
+    "file": "assets/algebra-Avepgyad.css",
+    "isEntry": true,
+    "src": "resources/css/math/algebra.css"
+  },
   "resources/js/app.js": {
-    "file": "assets/app-UhcfIIe_.js",
+    "file": "assets/app-mbGGjICm.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }

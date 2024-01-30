@@ -1,23 +1,3 @@
-const style = `
-.fraction {
-    display: inline-block;
-    position: relative;
-    vertical-align: middle;
-    letter-spacing: 0.001em;
-    text-align: center;
-}
-.fraction > span:nth-child(1) {
-    display: block;
-    padding: 0.1em;
-}
-.fraction > span:nth-child(2) {
-    border-top: thin solid black;
-}
-.fraction > span:nth-child(3) {
-    display: none;
-} 
-`;
-
 window.addEventListener('DOMContentLoaded', () => {
     document.body.append(style);
 
@@ -68,7 +48,7 @@ const simpleMultiplication = () => {
         case 1:
             return `${z} = ${y}x`;
         case 2:
-            return `${fraction(z,'x')} = ${y}`;
+            return `${fraction(z, 'x')} = ${y}`;
         case 3:
             return `${z} = ${y}x`;
         default:
