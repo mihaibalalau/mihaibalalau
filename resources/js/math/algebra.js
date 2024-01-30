@@ -1,11 +1,11 @@
 window.addEventListener('DOMContentLoaded', () => {
     document.body.append(
-        div([
-            div({ text: simpleMultiplication() }),
-            div({ text: simpleMultiplication() }),
-            div({ text: simpleMultiplication() }),
-            div({ text: simpleMultiplication() }),
-            div({ text: simpleMultiplication() }),
+        row([
+            column({ text: simpleMultiplication() }),
+            column({ text: simpleMultiplication() }),
+            column({ text: simpleMultiplication() }),
+            column({ text: simpleMultiplication() }),
+            column({ text: simpleMultiplication() }),
         ])
     );
 
