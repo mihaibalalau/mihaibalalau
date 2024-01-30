@@ -10,8 +10,6 @@ window.addEventListener('DOMContentLoaded', () => {
     );
 
     renderMathInElement(document.body, {
-        // customised options
-        // • auto-render specific keys, e.g.:
         delimiters: [{
             left: '$$',
             right: '$$',
