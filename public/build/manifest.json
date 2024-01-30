@@ -10,7 +10,7 @@
     "src": "resources/css/global.css"
   },
   "resources/js/app.js": {
-    "file": "assets/app-SG6M3BqK.js",
+    "file": "assets/app-lAXm18ad.js",
     "imports": [
       "resources/js/math/algebra.js"
     ],
@@ -18,7 +18,7 @@
     "src": "resources/js/app.js"
   },
   "resources/js/math/algebra.js": {
-    "file": "assets/algebra-vZ_BsojX.js",
+    "file": "assets/algebra-2w0cY44I.js",
     "isEntry": true,
     "src": "resources/js/math/algebra.js"
   }

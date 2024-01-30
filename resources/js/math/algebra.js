@@ -7,7 +7,35 @@ window.addEventListener('DOMContentLoaded', () => {
             div({ text: simpleMultiplication() }),
             div({ text: simpleMultiplication() }),
         ])
-    )
+    );
+
+    renderMathInElement(document.body, {
+        // customised options
+        // • auto-render specific keys, e.g.:
+        delimiters: [{
+            left: '$$',
+            right: '$$',
+            display: true
+        },
+        {
+            left: '$',
+            right: '$',
+            display: false
+        },
+        {
+            left: '\\(',
+            right: '\\)',
+            display: false
+        },
+        {
+            left: '\\[',
+            right: '\\]',
+            display: true
+        }
+        ],
+        // • rendering keys, e.g.:
+        throwOnError: false
+    });
 });
 
 const el = (tag, options) => {
@@ -49,15 +77,23 @@ const simpleMultiplication = () => {
     const x = random();
     const y = random();
     const z = x * y;
+    let expression = '';
 
     switch (format) {
         case 1:
-            return `${z} = ${y} * x`;
+            expression = `${z} = ${y} * x`;
+            break;
         case 2:
-            return `${z} / x = ${y}`;
+            expression = `${z} / x = ${y}`;
+            break;
         case 3:
-            return `${z} / ${y} = x`;
+            expression = `${z} / ${y} = x`;
+            break;
         default:
             throw new Error('Whoaa!');
     }
+
+    return mathWrapper(expression);
 }
+
+const mathWrapper = (expression) => `$$${expression}$$`;
