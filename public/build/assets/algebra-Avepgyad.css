@@ -1,0 +1,1 @@
+.fraction{display:inline-block;position:relative;vertical-align:middle;letter-spacing:.001em;text-align:center}.fraction>span:nth-child(1){display:block;padding:.1em}.fraction>span:nth-child(2){border-top:thin solid black}.fraction>span:nth-child(3){display:none}
