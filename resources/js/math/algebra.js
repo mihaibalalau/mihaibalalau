@@ -1,12 +1,14 @@
 window.addEventListener('DOMContentLoaded', () => {
     document.body.append(
-        row([
-            column({ text: simpleMultiplication() }),
-            column({ text: simpleMultiplication() }),
-            column({ text: simpleMultiplication() }),
-            column({ text: simpleMultiplication() }),
-            column({ text: simpleMultiplication() }),
-        ])
+        row({
+            children: [
+                column({ text: simpleMultiplication() }),
+                column({ text: simpleMultiplication() }),
+                column({ text: simpleMultiplication() }),
+                column({ text: simpleMultiplication() }),
+                column({ text: simpleMultiplication() }),
+            ]
+        })
     );
 
     renderMathInElement(document.body, {
@@ -39,28 +41,24 @@ window.addEventListener('DOMContentLoaded', () => {
 const el = (tag, options) => {
     const el = document.createElement(tag);
 
-    if (Array.isArray(options)) {
-        el.append(...options);
-    } else {
-        if (options.className) {
-            el.className = options.className
-        }
+    if (options.className) {
+        el.className = options.className
+    }
 
-        if (options.children) {
-            el.append(...options.children);
-        }
+    if (options.children) {
+        el.append(...options.children);
+    }
 
-        if (options.text) {
-            el.innerText = options.text;
-        }
+    if (options.text) {
+        el.innerText = options.text;
     }
 
     return el;
 }
 
 const div = (options) => el('div', options);
-const row = ({ className = '', ...options }) => el('div', { ...options, className: 'row ' + className });
-const column = ({ className = '', ...options }) => el('div', { ...options, className: 'column ' + className });
+const row = (options) => el('div', { ...options, className: 'row ' + className });
+const column = (options) => el('div', { ...options, className: 'column ' + className });
 
 
 /*
