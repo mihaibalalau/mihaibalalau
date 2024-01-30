@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
     document.body.append(
         row({
-            children: Array(10).map(i => column({ text: simpleMultiplication() }))
+            children: Array(10).fill(0).map(i => column({ text: simpleMultiplication() }))
         })
     );
 
