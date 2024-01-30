@@ -57,8 +57,8 @@ const el = (tag, options) => {
 }
 
 const div = (options) => el('div', options);
-const row = (options) => el('div', { ...options, className: 'row ' + className });
-const column = (options) => el('div', { ...options, className: 'column ' + className });
+const row = (options) => el('div', { ...options, className: 'row ' + (options.className ?? '') });
+const column = (options) => el('div', { ...options, className: 'column ' + (options.className ?? '') });
 
 
 /*
