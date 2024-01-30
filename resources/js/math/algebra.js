@@ -1,32 +1,42 @@
 window.addEventListener('DOMContentLoaded', () => {
-    document.body.append(style);
-
+    document.body.append(
+        div([
+            div({ text: simpleMultiplication() }),
+        ])
+    )
 });
 
 const el = (tag, options) => {
     const el = document.createElement(tag);
 
-    if (options.class) {
-        el.classList.push(options.class)
+    if (Array.isArray(options)) {
+        el.append(...options);
+    } else {
+        if (options.class) {
+            el.classList.push(options.class)
+        }
+
+        if (options.children) {
+            el.append(...options.children);
+        }
+
+        if (options.text) {
+            el.innerText = options.text;
+        }
     }
 
-    if (options.children) {
-        el.append(...options.children);
-    }
-
-    if (options.text) {
-        el.innerText = options.text;
-    }
+    return el;
 }
 
+const div = (options) => el('div', options);
+const span = (options) => el('span', options);
+
 const fraction = (sup, sub) => {
-    return el('div', {
-        children: [
-            el('span', { text: sup }),
-            el('span', { text: '/' }),
-            el('span', { text: sub }),
-        ]
-    })
+    return div([
+        span({ text: sup }),
+        span({ text: '/' }),
+        span({ text: sub }),
+    ])
 }
 
 /*
