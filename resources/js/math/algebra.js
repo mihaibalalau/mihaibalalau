@@ -2,11 +2,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document.body.append(
         row({
             children: [
-                column({ text: simpleMultiplication() }),
-                column({ text: simpleMultiplication() }),
-                column({ text: simpleMultiplication() }),
-                column({ text: simpleMultiplication() }),
-                column({ text: simpleMultiplication() }),
+                Array(10).map(i => column({ text: simpleMultiplication() }))
             ]
         })
     );
