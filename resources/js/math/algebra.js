@@ -97,4 +97,4 @@ const simpleMultiplication = () => {
     return mathWrapper(expression);
 }
 
-const mathWrapper = (expression) => `$$${expression}$$`;
+const mathWrapper = (expression) => `$$${expression}, x = ?$$`;
