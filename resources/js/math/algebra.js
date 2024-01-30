@@ -42,8 +42,8 @@ const el = (tag, options) => {
     if (Array.isArray(options)) {
         el.append(...options);
     } else {
-        if (options.class) {
-            el.classList.push(options.class)
+        if (options.className) {
+            el.className = options.className
         }
 
         if (options.children) {
@@ -59,8 +59,8 @@ const el = (tag, options) => {
 }
 
 const div = (options) => el('div', options);
-const row = ({ className = '', ...options }) => el('div', { ...options, class: 'row ' + className });
-const column = ({ className = '', ...options }) => el('div', { ...options, class: 'column ' + className });
+const row = ({ className = '', ...options }) => el('div', { ...options, className: 'row ' + className });
+const column = ({ className = '', ...options }) => el('div', { ...options, className: 'column ' + className });
 
 
 /*
